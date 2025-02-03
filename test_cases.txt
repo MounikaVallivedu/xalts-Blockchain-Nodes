@@ -1,0 +1,267 @@
+Test Cases for Blockchain Portal
+
+I. Authentication Test Cases
+
+Sign Up
+
+Success Scenarios:
+
+1.Valid email and password
+
+Input: Provide a valid email format (e.g., user@example.com) and a password with at least 8 characters, including uppercase, lowercase, numbers, and special characters.
+
+Expected Outcome: The account is created successfully, and the user is redirected to the login page or dashboard with a confirmation message.
+
+Failure Scenarios:
+
+2.Invalid email format
+
+Input: Enter an email without @ or domain name (e.g., userexample.com).
+
+Expected Outcome: An error message is displayed, prompting the user to enter a valid email.
+
+3.Password too short
+
+Input: Enter a password shorter than 8 characters.
+
+Expected Outcome: A validation error appears, requesting a password with at least 8 characters.
+
+4.Empty fields
+
+Input: Leave the email and password fields blank.
+
+Expected Outcome: An error message appears, prompting the user to fill in the required fields.
+
+5.Already registered email
+
+Input: Enter an email that is already registered.
+
+Expected Outcome: An error message is displayed, stating that the email is already in use.
+
+Sign In
+
+Success Scenarios:
+
+6.Valid credentials
+
+Input: Enter a registered email and the correct password.
+
+Expected Outcome: User is logged in and redirected to the dashboard.
+
+Failure Scenarios:
+
+7.Invalid email
+
+Input: Enter an email that is not in the correct format.
+
+Expected Outcome: An error message appears, stating invalid email format.
+
+8.Wrong password
+
+Input: Enter a valid email but an incorrect password.
+
+Expected Outcome: A message appears stating incorrect credentials.
+
+9.Empty fields
+
+Input: Leave email and password fields empty.
+
+Expected Outcome: A validation error prompts the user to fill in required fields.
+
+10.Unregistered email
+
+Input: Enter an email that has not been registered.
+
+Expected Outcome: A message appears stating that the email is not registered.
+
+Sign Out
+
+Success Scenarios:
+
+11.User successfully logs out
+
+Expected Outcome: The user is redirected to the login page, and the session is terminated, preventing access to protected pages.
+
+II. Node Onboarding Test Cases
+
+Add Node
+
+Success Scenarios:
+
+1.Valid node details
+
+Input: Enter a valid NodeID (e.g., NodeID-123) and a valid IP address (192.168.1.1).
+
+Expected Outcome: The node is added successfully and is visible in the node list.
+
+Failure Scenarios:
+
+2.Invalid NodeID format
+
+Input: Enter an incorrect NodeID format (e.g., 123-Node).
+
+Expected Outcome: An error message is displayed prompting the user to enter a correct format.
+
+3.Invalid IP address
+
+Input: Provide an IP address that is not in valid format (e.g., 300.300.1.1).
+
+Expected Outcome: The system rejects the input and displays an error message.
+
+4.Duplicate NodeID
+
+Input: Enter a NodeID that already exists in the system.
+
+Expected Outcome: An error message appears stating that the NodeID must be unique.
+
+5.Empty fields
+
+Input: Leave NodeID or IP address empty.
+
+Expected Outcome: Validation errors appear prompting the user to fill required fields.
+
+Add Wallet
+
+Success Scenarios:
+
+6.Valid wallet details
+
+Input: Enter a valid wallet address (e.g., 0xABC123...) and valid permission type (Admin, User).
+
+Expected Outcome: The wallet is added successfully.
+
+Failure Scenarios:
+
+7.Invalid wallet address
+
+Input: Enter an incorrect wallet format.
+
+Expected Outcome: An error message appears indicating an invalid format.
+
+8.Invalid permission type
+
+Input: Enter a permission type not supported by the system.
+
+Expected Outcome: An error message appears stating invalid permission type.
+
+9.Duplicate wallet address
+
+Input: Add an already registered wallet address.
+
+Expected Outcome: An error message appears stating that the wallet already exists.
+
+10.Empty fields
+
+Input: Leave fields blank.
+
+Expected Outcome: Validation errors prompt the user to enter required information.
+
+III. Create Private Blockchain Test Cases
+
+Network Creation
+
+Success Scenarios:
+
+1.Valid network name and wallet
+
+Input: Enter a unique network name and valid wallet address.
+
+Expected Outcome: The network is created successfully.
+
+Failure Scenarios:
+
+2.Empty network name
+
+Input: Leave the network name field blank.
+
+Expected Outcome: An error message appears prompting the user to enter a name.
+
+3.Invalid wallet address
+
+Input: Enter an incorrectly formatted wallet address.
+
+Expected Outcome: Validation error appears indicating invalid wallet format.
+
+4.Duplicate network name
+
+Input: Enter an already existing network name.
+
+Expected Outcome: An error message appears stating that the network name must be unique.
+
+Node Addition
+
+Success Scenarios:
+
+5.Add multiple valid nodes
+
+Input: Provide valid NodeIDs and IP addresses for multiple nodes.
+
+Expected Outcome: All nodes are added successfully.
+
+Failure Scenarios:
+
+6.Invalid node details
+
+Input: Enter incorrect NodeID or IP format.
+
+Expected Outcome: Error message appears prompting the user to enter correct details.
+
+7.Duplicate nodes
+
+Input: Add a node that already exists.
+
+Expected Outcome: Error message appears stating duplicate node.
+
+8.Empty fields
+
+Input: Leave required fields blank.
+
+Expected Outcome: Validation errors prompt the user to enter necessary information.
+
+IV. UI/UX Test Cases
+
+1.Navigation flow
+
+Ensure users can navigate seamlessly between pages.
+
+2.Form validation
+
+Verify forms properly validate input fields.
+
+3.Error messages
+
+Ensure error messages are clear and user-friendly.
+
+4.Loading states
+
+Check for proper loading indicators.
+
+5.Responsive design
+
+Test UI across different devices.
+
+6.Button states (enabled/disabled)
+
+Ensure buttons behave correctly based on user input.
+
+V. Security Test Cases
+
+1.Session management
+
+Validate session expiration and token refresh mechanisms.
+
+2.Input sanitization
+
+Ensure user inputs are sanitized to prevent XSS and SQL injection.
+
+3.Authentication token validation
+
+Check JWT or session tokens for security flaws.
+
+4.Access control
+
+Verify role-based access controls work as expected.
+
+5.Form submission security
+
+Ensure forms cannot be submitted without proper validation and authentication.
